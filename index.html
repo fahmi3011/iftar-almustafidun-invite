@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Iftar Al-Mustafidun 2025</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;900&display=swap');
+
+  /* Reset & base */
+  * { box-sizing: border-box; margin:0; padding:0; }
+  body { font-family: 'Montserrat', sans-serif; background:#e8f0f7; color:#2c4b5f; overflow-x:hidden; }
+
+  /* Cover */
+  #cover {
+    position: fixed; top:0; left:0; width:100%; height:100vh;
+    background: linear-gradient(135deg,#2c4b5f,#7da7bf);
+    display:flex; flex-direction:column; justify-content:center; align-items:center;
+    color:white; z-index:10; text-align:center;
+  }
+  #cover h1 { font-size:5rem; font-weight:900; margin-bottom:10px; }
+  #cover h2 { font-size:3rem; margin-bottom:30px; font-weight:700; }
+  #openBtn {
+    padding:18px 60px; font-size:1.8rem; font-weight:700; border:none; border-radius:12px;
+    background:white; color:#2c4b5f; cursor:pointer; transition:0.3s;
+  }
+  #openBtn:hover { background:#d5e5f2; }
+
+  /* Sparkle animation */
+  .sparkle {
+    position:absolute; width:20px; height:20px;
+    background: radial-gradient(closest-side,#e3f2ff,transparent);
+    filter: drop-shadow(0 0 4px #bae1ff); border-radius:50%;
+    animation: sparkleAnim 2.5s infinite ease-in-out;
+  }
+  .sparkle:nth-child(1) { top:50px; left:15%; animation-delay:0s; }
+  .sparkle:nth-child(2) { top:180px; left:50%; animation-delay:1s; }
+  .sparkle:nth-child(3) { top:300px; right:10%; animation-delay:1.7s; }
+  .sparkle:nth-child(4) { top:400px; left:5%; animation-delay:2.3s; }
+
+  @keyframes sparkleAnim {
+    0%,100% { transform:scale(1) rotate(0deg); opacity:1; }
+    50% { transform:scale(1.5) rotate(20deg); opacity:0.5; }
+  }
+
+  /* Main container */
+  main {
+    max-width:760px; margin:40px auto; padding:40px 30px 60px;
+    background:white; border-radius:20px; box-shadow:0 15px 40px rgba(0,0,0,0.1);
+    display:none; flex-direction:column; align-items:center;
+  }
+
+  h1.main-title { font-size:3.5rem; font-weight:900; margin-bottom:10px; }
+  h1.main-title span { color:#5081a2; }
+  h2.main-subtitle { font-size:2rem; font-weight:700; margin-bottom:40px; }
+
+  /* Info cards */
+  .info-list { list-style:none; margin-bottom:40px; width:100%; display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:20px; }
+  .info-list li {
+    background:#e6f0f7; padding:20px; border-radius:15px; font-weight:700;
+    display:flex; align-items:center; gap:10px; justify-content:center; box-shadow:0 5px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s;
+  }
+  .info-list li:hover { transform:translateY(-5px); }
+  .info-list li svg { width:28px; height:28px; fill:#2c4b5f; }
+
+  /* Countdown */
+  #countdown { font-size:1.6rem; font-weight:700; margin-bottom:20px; color:#1f3550; }
+
+  /* Google Maps Button */
+  #mapBtn {
+    margin-bottom:40px; padding:14px 40px; font-weight:700; border:none;
+    background:#2c4b5f; color:white; border-radius:10px; cursor:pointer;
+    box-shadow:0 5px 15px rgba(44,75,95,0.5); transition:0.3s;
+  }
+  #mapBtn:hover { background:#1f3550; }
+
+  /* Rundown Table */
+  table { border-collapse:collapse; width:100%; margin-bottom:40px; }
+  th,td { border:2px solid #3b5d73; padding:12px 16px; font-weight:600; }
+  th { background:#d5e5f2; }
+  td { font-weight:500; }
+
+  .note { font-style:italic; font-weight:700; color:#3b5d73; margin-bottom:50px; }
+
+  /* Dress code */
+  .dress-code { display:flex; justify-content:center; gap:40px; flex-wrap:wrap; margin-bottom:50px; }
+  .dress-box {
+    background:#e6f0f7; border-radius:12px; width:260px; padding:30px 20px;
+    display:flex; flex-direction:column; align-items:center; box-shadow:0 5px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+  }
+  .dress-box:hover { transform:scale(1.05); }
+  .dress-box svg { width:60px; height:60px; margin-bottom:20px; fill:#2c4b5f; }
+
+  /* Footer */
+  footer { font-weight:600; color:#2c4b5f; font-size:0.9rem; text-align:center; margin-bottom:30px; }
+
+  /* Responsive */
+  @media(max-width:650px){ .dress-code { flex-direction:column; align-items:center; } }
+</style>
+</head>
+<body>
+
+<!-- Cover -->
+<div id="cover">
+  <h1>IFTAR</h1>
+  <h2>AL-MUSTAFIDUN’25</h2>
+  <button id="openBtn">Buka Undangan</button>
+</div>
+
+<!-- Sparkles -->
+<div class="sparkle"></div>
+<div class="sparkle"></div>
+<div class="sparkle"></div>
+<div class="sparkle"></div>
+
+<!-- Main Content -->
+<main id="mainContent">
+  <h1 class="main-title">IFTAR <span>AL-MUSTAFIDUN’25</span></h1>
+  <h2 class="main-subtitle">Undangan Iftar Bersama</h2>
+
+  <!-- Info Cards -->
+  <ul class="info-list">
+    <li>
+      <svg viewBox="0 0 24 24"><path d="M12 1a11 11 0 1 0 11 11A11 11 0 0 0 12 1Zm0 20a9 9 0 1 1 9-9 9 9 0 0 1-9 9Zm.5-9.25V7h-1v6h5v-1Z"/></svg>
+      17.30 WIB – Selesai
+    </li>
+    <li>
+      <svg viewBox="0 0 24 24"><path d="M7 10v7h10v-7H7Zm0-1h10V8H7Zm0 1h10v7H7Z"/></svg>
+      Sabtu, 14 Maret 2026
+    </li>
+    <li>
+      <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7Zm0 8.5a1.5 1.5 0 1 1 1.5-1.5A1.5 1.5 0 0 1 12 10.5Z"/></svg>
+      Serela Riau Hotel, Bandung
+    </li>
+  </ul>
+
+  <!-- Countdown -->
+  <div id="countdown"></div>
+
+  <!-- Map Button -->
+  <button id="mapBtn">Lihat Lokasi di Google Maps</button>
+
+  <!-- Rundown Table -->
+  <table>
+    <thead>
+      <tr><th>ACARA</th><th>WAKTU</th><th>PENGISI ACARA</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Pembukaan</td><td>17.30 – 17.40</td><td>MC</td></tr>
+      <tr><td>Pembacaan Al-Quran</td><td>17.40 – 17.50</td><td>Salah Satu Alumni</td></tr>
+      <tr><td>Sambutan</td><td>17.50 – 18.00</td><td>Panitia</td></tr>
+      <tr><td>Sholat Magrib & Buka Puasa</td><td>18.10 – 19.10</td><td>Seluruh Alumni</td></tr>
+      <tr><td>Penutupan & Doa</td><td>19.10 – 19.20</td><td>MC & Panitia</td></tr>
+      <tr><td>Foto Bersama</td><td>19.20 – 19.30</td><td>Seluruh Alumni</td></tr>
+      <tr><td>Selesai</td><td>19.30</td><td>-</td></tr>
+    </tbody>
+  </table>
+
+  <p class="note">#NOTE : 17.30 SUDAH DI TEMPAT</p>
+
+  <!-- Dress Code -->
+  <section class="dress-code">
+    <div class="dress-box">
+      <svg viewBox="0 0 64 64"><path d="M22 8c-1.5 0-3 3.5-3 7s1 7 2.5 7 3-3.5 3-7-1-7-2.5-7zm19 0c-1.5 0-3 3.5-3 7s1 7 2.5 7 3-3.5 3-7-1-7-2.5-7zm-14 18v14l-7 15h28l-7-15V26z"/></svg>
+      <p>Gamis Hitam<br>Kerudung Hitam</p>
+    </div>
+    <div class="dress-box">
+      <svg viewBox="0 0 64 64"><path d="M30 10c-2 0-4 2-4 4s2 4 4 4 4-2 4-4-2-4-4-4zm10 8h-16v24h16zM14 48h36v6H14z"/></svg>
+      <p>Kemeja / Gamis Hitam<br>Celana Hitam</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  &copy; Iftar Alumni Al-Mustafidun 2025
+</footer>
+
+<script>
+  // Open invitation
+  document.getElementById('openBtn').addEventListener('click',()=>{
+    document.getElementById('cover').style.display='none';
+    document.getElementById('mainContent').style.display='flex';
+  });
+
+  // Countdown
+  const countdownEl = document.getElementById('countdown');
+  const targetDate = new Date('March 14, 2026 17:30:00').getTime();
+  function updateCountdown(){
+    const now = new Date().getTime();
+    const diff = targetDate - now;
+    if(diff<0){ countdownEl.textContent="Acara sedang berlangsung atau telah selesai"; return; }
+    const d=Math.floor(diff/(1000*60*60*24));
+    const h=Math.floor((diff%(1000*60*60*24))/(1000*60*60));
+    const m=Math.floor((diff%(1000*60*60))/(1000*60));
+    const s=Math.floor((diff%(1000*60))/1000);
+    countdownEl.textContent = (d>0?d+" Hari ":"")+h+" Jam "+m+" Menit "+s+" Detik";
+  }
+  setInterval(updateCountdown,1000);
+  updateCountdown();
+
+  // Open Google Maps
+  document.getElementById('mapBtn').addEventListener('click',()=> {
+    window.open("https://goo.gl/maps/gVr4rURWgnPQUtyC9","_blank");
+  });
+</script>
+</body>
+</html>
